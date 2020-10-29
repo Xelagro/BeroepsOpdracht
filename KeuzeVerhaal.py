@@ -11,9 +11,14 @@ required = ("\nUse only A Or B\n")
 
 #starting with "intro"
 def intro():
+  print("""Dit is een verhaal over een man die woont in Syrië en homo
+seksueel is, nu is het aan jou de keuze wat jij gaat doen in het leven van
+deze man. Veel plezier!
+-------------------------------------------------------------------------------""")
+  time.sleep(3)
   print ("""Je bent weer een dag verder, je word wakker en het is maandag ochtend.
 Je bent laat wakker maar, je moet naar werk toe.
-Toch denk je erover na te thuis te blijven, 
+Toch denk je erover na thuis te blijven, 
 Je hebt de keuze nu om thuis te blijven of naar werk te gaan:
 -------------------------------------------------------------------------------""")
   time.sleep(1)
@@ -304,7 +309,7 @@ B. Nee""")
 # VERHAAL 15
 
 def verhaal15():
-  ("""Jullie hebben gekozen om nog een kind bij het huwelijk te nemen!
+  print("""Jullie hebben gekozen om nog een kind bij het huwelijk te nemen!
 Jullie kunnen nog kiezen tussen een meisje of een jongen!
 -------------------------------------------------------------------------------""")
   time.sleep(1)
@@ -312,9 +317,9 @@ Jullie kunnen nog kiezen tussen een meisje of een jongen!
 B. Jongen""")
   choice = input (">>>" )
   if choice in answer_A:
-   verhaal18()
+   verhaal22()
   elif choice in answer_B:
-    verhaal19()
+    verhaal23()
   else:
     print (required)
     intro()
@@ -322,7 +327,7 @@ B. Jongen""")
     
 
 
-#VERHAAL 18
+#VERHAAL 18 Non Married
 def verhaal18():
   print("""Jullie hebben gekozen voor een meisje,
 Hoe willen jullie haar noemen?
@@ -340,7 +345,7 @@ B. Bibi""")
     intro()
 
 
-#VERHAAL 19
+#VERHAAL 19 Non Married
 def verhaal19():
   print("""Jullie hebben gekozen voor een jongen,
 Hoe zouden jullie hem willen noemen?
@@ -358,6 +363,44 @@ B. Amir""")
     intro()
 
 
+#VERHAAL 23 Married
+def verhaal23():
+  print("""Jullie hebben gekozen voor een jongen,
+Hoe zouden jullie hem willen noemen?
+-------------------------------------------------------------------------------""")
+  time.sleep(1)
+  print("""A. Rayan
+B. Amir""")
+  choice = input (">>>" )
+  if choice in answer_A:
+     goedEinde1()
+  elif choice in answer_B:
+     goedEinde1()
+  else:
+    print (required)
+    intro()
+
+
+
+#VERHAAL 22 Married
+def verhaal22():
+  print("""Jullie hebben gekozen voor een meisje,
+Hoe willen jullie haar noemen?
+-------------------------------------------------------------------------------""")
+  time.sleep(1)
+  print("""A. Noor
+B. Bibi""")
+  choice = input (">>>" )
+  if choice in answer_A:
+      goedEinde1()
+  elif choice in answer_B:
+      goedEinde1()
+  else:
+    print (required)
+    intro()
+
+
+    
 #VERHAAL 20
     
 def verhaal20():
@@ -416,7 +459,7 @@ Wilt u het opnieuw proberen?
 B. Nee""")
   choice = input (">>> ")
   if choice in answer_A:
-    intro
+    intro()
   elif choice in answer_B:
     print ("""Dankjewel voor je deelname!""")
   else:
@@ -435,7 +478,7 @@ Wilt u het opnieuw proberen?
   B. Nee""")
   choice = input (">>> ")
   if choice in answer_A:
-    intro
+    intro()
   elif choice in answer_B:
     print ("""Dankjewel voor je deelname!""")
   else:
@@ -455,7 +498,7 @@ Wilje het opnieuw proberen??
   B. Nee""")
   choice = input (">>> ")
   if choice in answer_A:
-    intro
+    intro()
   elif choice in answer_B:
     print ("""Dankjewel voor je deelname!""")
   else:
